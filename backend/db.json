@@ -1,23 +1,22 @@
 {
   "users": [
-    { 
-        "id": "0jksckjguiigw",
-        "name": "john",
-        "email":"john@doe1.com",
-        "password" : "123466"
-        }
+    {
+      "id": "eMMPJ4NYy7wgrReezRVP_",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "isAdmin": true
+    }
   ],
   "products": [
-   {
-    "id":"0jksckjguiigw",
-    "title":" testtile products",
-    "price":0.1,
-    "description":" hsihcio ihois hiihics ",
-    "category":"joacs ",
-    "image":"https://somethigijioa "
-
-   }
-],
-"carts":[]
- 
+    {
+      "id": "0jksckjguiigw",
+      "title": " testtile products",
+      "price": 0.1,
+      "description": " hsihcio ihois hiihics ",
+      "category": "joacs ",
+      "image": "https://somethigijioa "
+    }
+  ],
+  "carts": []
 }

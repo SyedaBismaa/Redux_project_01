@@ -1,13 +1,14 @@
 
 import { useForm } from "react-hook-form"
+import { useDispatch } from "react-redux"
+import { asyncloginuser } from "../stores/actions/userAction"
 import { Link } from "react-router-dom"
 const Login = () => {
 
   const { register, reset, handleSubmit } = useForm()
-
+   const dispatch=useDispatch();
   const LoginHandler = (user) => {
-
-    console.log(user)
+    dispatch(asyncloginuser(user));
   }
 
 
@@ -16,11 +17,10 @@ const Login = () => {
     className='flex flex-col w-1/2 justify-start items-start  p-5 '>
 
     <input
-      {...register("username")}
+      {...register("email")}
       className='outline-0 border-b p-2 text-xl'
-      type="text"
-      placeholder='Username' />
-
+      type="email"
+      placeholder='email' />
 
     <input
       {...register("password")}
