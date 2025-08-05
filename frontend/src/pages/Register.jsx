@@ -1,18 +1,19 @@
 
 import { useForm } from "react-hook-form"
+import { nanoid } from "nanoid"
 import { Link } from "react-router-dom"
-const Login = () => {
+const Register = () => {
 
   const { register, reset, handleSubmit } = useForm()
 
-  const LoginHandler = (user) => {
-
+  const RegisterHandler = (user) => {
+    user.id = nanoid();
     console.log(user)
   }
 
 
   return <form
-    onSubmit={handleSubmit(LoginHandler)}
+    onSubmit={handleSubmit(RegisterHandler)}
     className='flex flex-col w-1/2 justify-start items-start  p-5 '>
 
     <input
@@ -21,6 +22,11 @@ const Login = () => {
       type="text"
       placeholder='Username' />
 
+    <input
+      {...register("email")}
+      className='outline-0 border-b p-2 text-xl'
+      type="email"
+      placeholder='jhon@doe.com' />
 
     <input
       {...register("password")}
@@ -28,14 +34,14 @@ const Login = () => {
       type="password"
       placeholder='++++' />
 
-    <button className="mt-5 bg-blue-500 p-2 rounded-md" > Login User</button>
+    <button className="mt-5 bg-blue-500 p-2 rounded-md">Ragister User</button>
 
     <p className="mt-5">
-      Don0t Have an accound?
-      <Link className='text-blue-500' to="/register" >Register</Link>
+      already Have an accound?
+      <Link className='text-blue-500' to="/login" > Login</Link>
     </p>
   </form>
 
 }
 
-export default Login
+export default Register;
