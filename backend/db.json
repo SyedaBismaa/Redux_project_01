@@ -6,6 +6,13 @@
       "email": "admin@gmail.com",
       "password": "123456",
       "isAdmin": true
+    },
+    {
+      "id": "d2RFtBaSOmzlDqS-R6RYI",
+      "username": "Luffy",
+      "email": "Luffy@gmail.com",
+      "password": "33",
+      "isAdmin": false
     }
   ],
   "products": [
@@ -16,6 +23,30 @@
       "description": " hsihcio ihois hiihics ",
       "category": "joacs ",
       "image": "https://somethigijioa "
+    },
+    {
+      "id": "w9NGk08sSWvwdeKUK8lRC",
+      "image": "https://i.pinimg.com/originals/aa/2d/81/aa2d816fb0da331cf646388c78e6149a.jpg",
+      "title": "dressroxa",
+      "price": "2346",
+      "description": "dummy data for testing the api",
+      "category": "dummyy"
+    },
+    {
+      "id": "FbmwmSV-qk60S4vyuX6sh",
+      "image": "https://i.pinimg.com/originals/aa/2d/81/aa2d816fb0da331cf646388c78e6149a.jpg",
+      "title": "dressroxagdyug",
+      "price": "2346",
+      "description": "mncknjshdiuchd",
+      "category": "sdhuid87hjeig"
+    },
+    {
+      "id": "EQfi6dZ-L3RG4RnK_IIQ4",
+      "image": "https://i.pinimg.com/originals/aa/2d/81/aa2d816fb0da331cf646388c78e6149a.jpg",
+      "title": "dressroxagdyug",
+      "price": "2346",
+      "description": "jhh",
+      "category": "sdhuid87hjeig"
     }
   ],
   "carts": []

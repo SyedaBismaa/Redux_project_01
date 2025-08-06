@@ -31,7 +31,7 @@ const Login = () => {
     <button className="mt-5 bg-blue-500 p-2 rounded-md" > Login User</button>
 
     <p className="mt-5">
-      Don0t Have an accound?
+      Dont Have an accound?
       <Link className='text-blue-500' to="/register" >Register</Link>
     </p>
   </form>
