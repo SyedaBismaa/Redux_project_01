@@ -5,7 +5,7 @@ import Products from  '../pages/Products'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
 import CreateProduct from '../pages/admin/CreateProduct'
-import UpdateProduct from '../pages/admin/UpdateProduct'
+import ProductDetails from '../pages/admin/ProductDetails'
 
 const MainRoutes = () => {
   return (
@@ -16,14 +16,8 @@ const MainRoutes = () => {
     <Route path="/Register" element={<Register/>}/>
 
 
-
-
-
+      <Route path="/products/:id" element={<ProductDetails/>}/>
     <Route path="/admin/create-product" element={<CreateProduct/>}/>
-    <Route path="/admin/create-product/:id" element={<UpdateProduct/>}/>
-
-    
-
 
    </Routes>
   )

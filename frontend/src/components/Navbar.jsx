@@ -4,8 +4,6 @@ import { NavLink } from "react-router-dom"
 const Navbar = () => {
 
   const user = useSelector((state) => state.userReducer.users);
-  console.log(user);
-
 
   return (
     <nav className="flex mb-10 justify-center items-center gap-x-5 p-10">
