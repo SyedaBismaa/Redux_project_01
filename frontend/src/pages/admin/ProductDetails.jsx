@@ -1,7 +1,8 @@
 import { useSelector,useDispatch } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
   import { useForm } from "react-hook-form"
+import { asyncdeleteproduct, asyncupdateproduct } from '../../stores/actions/productAction';
 
 
 
@@ -27,9 +28,15 @@ const ProductDetails = () => {
    const navigate = useNavigate();
   const dispatch= useDispatch()
   const UpdateProductHandler = (product) => {
-    dispatch(asyncupdateproduct(product));
-    navigate("/products")
+    dispatch(asyncupdateproduct(id,product));
+
   };
+
+
+  const deleteHandler=()=>{
+   dispatch(asyncdeleteproduct(id));
+   navigate("/products")
+  }
 
   return product? (
     <>
@@ -39,6 +46,8 @@ const ProductDetails = () => {
           <h1>{product.title}</h1>
           <h2>{product.price}</h2>
           <p>{product.description}</p>
+          <p>{product.category}</p>
+
           <button>Add To cart</button>
 
         </div>
@@ -79,9 +88,13 @@ const ProductDetails = () => {
       type="text"
       placeholder='category name' />
 
-    <button className="mt-5 bg-blue-500 p-2 rounded-md">Update Product</button>
+        <button className="mt-5 bg-blue-500 p-2 rounded-md">Update Product</button>
 
   </form>
+
+  <button
+  onClick={deleteHandler} 
+   className="mt-5 bg-red-500 p-2 rounded-md">DeleteProduct</button>
     </div>
     </>
   ): "Loading...."

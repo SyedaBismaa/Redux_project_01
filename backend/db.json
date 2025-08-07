@@ -15,39 +15,6 @@
       "isAdmin": false
     }
   ],
-  "products": [
-    {
-      "id": "0jksckjguiigw",
-      "title": " testtile products",
-      "price": 0.1,
-      "description": " hsihcio ihois hiihics ",
-      "category": "joacs ",
-      "image": "https://somethigijioa "
-    },
-    {
-      "id": "ZhT-UaBjf5eGxjyVwE7jU",
-      "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
-      "title": "testttt",
-      "price": "3456",
-      "description": "dummy data for checking the products",
-      "category": "fashion"
-    },
-    {
-      "id": "Xl8NPpBmejeD0-nN2AXGM",
-      "image": "https://i.pinimg.com/originals/a2/4e/27/a24e27d9aef98312a9b95be46c05e96f.jpg",
-      "title": "something",
-      "price": "22",
-      "description": "jjsi nks jdsj iwq09in 90349 jkjsd jojf pd0",
-      "category": "ooif"
-    },
-    {
-      "id": "67Vq8F1Jf-eCUACmFxHIP",
-      "image": "",
-      "title": "",
-      "price": "",
-      "description": "",
-      "category": ""
-    }
-  ],
+  "products": [],
   "carts": []
 }
