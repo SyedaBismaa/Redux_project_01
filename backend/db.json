@@ -4,17 +4,42 @@
       "id": "eMMPJ4NYy7wgrReezRVP_",
       "username": "admin",
       "email": "admin@gmail.com",
-      "password": "123456",
+      "password": "11",
       "isAdmin": true
     },
     {
       "id": "d2RFtBaSOmzlDqS-R6RYI",
-      "username": "Luffy",
+      "username": "Monkey.D.Luffy",
       "email": "Luffy@gmail.com",
       "password": "33",
       "isAdmin": false
     }
   ],
-  "products": [],
+  "products": [
+    {
+      "id": "_Gb5GZMjhaiVf8P_Q9UGF",
+      "image": "https://i.pinimg.com/originals/a2/4e/27/a24e27d9aef98312a9b95be46c05e96f.jpg",
+      "title": "bunny",
+      "price": "2455",
+      "description": "9uw jew jijjen ",
+      "category": "jwoud nid"
+    },
+    {
+      "id": "GP5biOu1pqtw5g8pu0TSg",
+      "image": "https://i.pinimg.com/originals/a2/4e/27/a24e27d9aef98312a9b95be46c05e96f.jpg",
+      "title": "bad bunny ",
+      "price": "45",
+      "description": "hiue jwe j9iw j0ew ",
+      "category": "ji"
+    },
+    {
+      "id": "YMsoE7ZkgKvMkapf0xVuX",
+      "image": "",
+      "title": "",
+      "price": "",
+      "description": "",
+      "category": ""
+    }
+  ],
   "carts": []
 }

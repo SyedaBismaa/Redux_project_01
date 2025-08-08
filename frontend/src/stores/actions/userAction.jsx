@@ -1,8 +1,7 @@
 //calling the data
 
 import axios from "../../api/axiosconfig"
-import { loaduser } from "../reducers/userSlice";
-// import { loaduser } from "../reducers/userSlice";
+import { loaduser, removeuser } from "../reducers/userSlice";
 
  export const asynccurrentuser = () => async (dispatch , getState)=>  {
     try{
@@ -18,7 +17,9 @@ import { loaduser } from "../reducers/userSlice";
 
  export const asynclogoutuser = () => async (dispatch , getState)=>  {
     try{
-     localStorage.setItem("user", "");
+     localStorage.removeItem("user");
+     dispatch(removeuser())
+    //  console.log("USer Logout bye")
      
     }catch(error){
         console.log(error);
@@ -52,5 +53,31 @@ import { loaduser } from "../reducers/userSlice";
     }catch(error){
         console.log(error);
         
+    }
+}
+
+
+
+ export const asyncupdateuser = (id,user) => async (dispatch , getState)=>  {
+   
+    try{
+    const {data} = await  axios.patch("/users/"+id, user)
+     localStorage.setItem("user",JSON.stringify(data));
+     dispatch(asynccurrentuser())
+       
+    }catch(error){
+        console.log(error);
+        
+    }
+}
+
+export const asyncdeleteuser = (id) => async (dispatch, getState) => {
+    try {
+        await axios.delete("/users/"+id);
+        dispatch(asynclogoutuser());
+
+    } catch (error) {
+        console.log(error);
+
     }
 }

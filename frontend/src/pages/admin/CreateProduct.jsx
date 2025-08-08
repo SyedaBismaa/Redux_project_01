@@ -6,7 +6,7 @@ import { asynccreateproduct } from "../../stores/actions/productAction"
 
 
 const CreateProduct = () => {
-     const { register, reset, handleSubmit } = useForm()
+     const { register, handleSubmit } = useForm()
    const navigate = useNavigate();
   const dispatch= useDispatch()
   const CreateProductHandler = (product) => {
@@ -37,7 +37,7 @@ const CreateProduct = () => {
       {...register("price")}
       className='outline-0 border-b p-2 text-xl'
       type="number"
-      placeholder='00' />
+      placeholder='$00' />
 
     <textarea
       {...register("description")}
