@@ -1,18 +1,25 @@
 {
   "users": [
     {
-      "id": "eMMPJ4NYy7wgrReezRVP_",
-      "username": "admin",
-      "email": "admin@gmail.com",
-      "password": "11",
-      "isAdmin": true
-    },
-    {
       "id": "d2RFtBaSOmzlDqS-R6RYI",
-      "username": "Monkey.D.Luffy",
+      "username": "",
       "email": "Luffy@gmail.com",
       "password": "33",
-      "isAdmin": false
+      "isAdmin": false,
+      "cart": []
+    },
+    {
+      "id": "VRDyiBabjqAy9Rb_RyUDQ",
+      "username": "malik",
+      "email": "admin@mail.com",
+      "password": "12",
+      "isAdmin": false,
+      "cart": [
+        {
+          "productId": "EKy70-At0uL-akSzsST-A",
+          "quantity": 5
+        }
+      ]
     }
   ],
   "products": [
@@ -25,20 +32,12 @@
       "category": "jwoud nid"
     },
     {
-      "id": "GP5biOu1pqtw5g8pu0TSg",
-      "image": "https://i.pinimg.com/originals/a2/4e/27/a24e27d9aef98312a9b95be46c05e96f.jpg",
-      "title": "bad bunny ",
-      "price": "45",
-      "description": "hiue jwe j9iw j0ew ",
-      "category": "ji"
-    },
-    {
-      "id": "YMsoE7ZkgKvMkapf0xVuX",
-      "image": "",
-      "title": "",
-      "price": "",
-      "description": "",
-      "category": ""
+      "id": "EKy70-At0uL-akSzsST-A",
+      "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
+      "title": "some",
+      "price": "23",
+      "description": "ttesting the cart functionality",
+      "category": "art"
     }
   ],
   "carts": []

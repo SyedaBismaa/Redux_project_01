@@ -11,7 +11,6 @@ import { loaduser, removeuser } from "../reducers/userSlice";
      
     }catch(error){
         console.log(error);
-        
     }
 }
 
