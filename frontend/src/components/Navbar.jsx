@@ -14,6 +14,8 @@ const Navbar = () => {
         {user && user?.isAdmin && <NavLink to="/admin/create-product">Create Products</NavLink>}
           
           <NavLink to="/admin/user-profile">Settings</NavLink>
+          <NavLink to="/cart">cart</NavLink>
+
 
         </>
       ) : (

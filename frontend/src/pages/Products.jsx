@@ -4,28 +4,26 @@ import { Link } from 'react-router-dom';
 import { asyncupdateuser } from '../stores/actions/userAction';
 
 const Products = () => {
-  // const dispatch = useDispatch();
-  const {
-    userReducer: { users },
-    productsReducer: { products } }
-    = useSelector((state) => state);
-
   const dispatch = useDispatch();
-  const addTocartHandler = (id) => {
+  const users = useSelector((state) => state.userReducer.users);
+  const products = useSelector((state) => state.productsReducer.products);
+
+
+
+  const addTocartHandler = (product) => {
     const copyuser = { ...users, cart: [...users.cart] };
-    const x = copyuser.cart.findIndex((c) => c.productId == id);
+    const x = copyuser.cart.findIndex((c) => c?.product?.id == product.id);
 
     if (x == -1) {
-      copyuser.cart.push({ productId: id, quantity: 1 })
+      copyuser.cart.push({ product, quantity: 1 })
     } else {
-       copyuser.cart[x]={
-          productId:id,
-          quantity: copyuser.cart[x].quantity+1,
-       }
+      copyuser.cart[x] = {
+        product,
+        quantity: copyuser.cart[x].quantity + 1,
+      }
 
     }
-    console.log(copyuser);
-     dispatch(asyncupdateuser(copyuser.id,copyuser))
+    dispatch(asyncupdateuser(copyuser.id, copyuser))
 
   };
 
@@ -49,7 +47,7 @@ const Products = () => {
       <div className="mt-auto flex justify-between items-center">
         <p className="text-blue-600 font-bold text-lg">₹{product.price}</p>
         <button
-          onClick={() => addTocartHandler(product.id)}
+          onClick={() => addTocartHandler(product)}
           className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-md text-sm">
           Add to Cart
         </button>
