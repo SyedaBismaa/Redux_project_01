@@ -13,7 +13,7 @@ const CreateProduct = () => {
     product.id = nanoid();
     console.log(product)
     dispatch(asynccreateproduct(product));
-    navigate("/products")
+    navigate("/")
   };
 
  return(

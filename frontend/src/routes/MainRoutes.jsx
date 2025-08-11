@@ -1,24 +1,34 @@
-import React from 'react'
+import { lazy } from "react"
 import { Routes, Route } from 'react-router-dom'
-import Home from '../pages/Home'
-import Products from '../pages/Products'
-import Login from '../pages/Login'
-import Register from '../pages/Register'
-import CreateProduct from '../pages/admin/CreateProduct'
-import ProductDetails from '../pages/admin/ProductDetails'
-import UserProfile from '../pages/user/UserProfile'
-import PageNotFound from '../pages/PageNotFound'
-import AuthWrapper from './AuthWrapper'
-import Cart from '../pages/user/Cart'
+import UnauthWrapper from "./UnauthWrapper";
+const Home = lazy(() => import("../pages/Home"));
+const Products = lazy(() => import("../pages/Products"));
+const Login = lazy(() => import("../pages/Login"));
+const Register = lazy(() => import("../pages/Register"));
+const CreateProduct = lazy(() => import('../pages/admin/CreateProduct'));
+const ProductDetails = lazy(() => import('../pages/admin/ProductDetails'));
+const UserProfile = lazy(() => import('../pages/user/UserProfile'));
+const PageNotFound = lazy(() => import('../pages/PageNotFound'));
+const AuthWrapper = lazy(() => import('./AuthWrapper'));
+const Cart = lazy(() => import('../pages/user/Cart'));
+
 
 const MainRoutes = () => {
 
   return (
     <Routes>
       <Route path="/" element={<Products />} />
-      {/* <Route path="/products" element={}/> */}
-      <Route path="/login" element={<Login />} />
-      <Route path="/Register" element={<Register />} />
+
+      <Route path="/login" element={
+        <UnauthWrapper>
+          <Login />
+        </UnauthWrapper>
+      } />
+      <Route path="/Register" element={
+        <UnauthWrapper>
+          <Register />
+        </UnauthWrapper>
+      } />
 
       <Route path="/products/:id" element={
         <AuthWrapper>

@@ -38,11 +38,11 @@ const Cart = () => {
 
 
   const cartItems = users.cart.map((c, index) =>
-    <li className='flex items-center justify-between  mb-10 bg-gray-600' key={c.product.id}>
-      <img className='mr-10 mt-3 w-[10%]' src={c.product.image} alt="" />
+    <li className='flex items-center justify-between  mb-10 bg-gray-600' key={c.product?.id}>
+      <img className='mr-10 mt-3 w-[10%]' src={c.product?.image} alt="" />
 
-      <span>{c.product.title}</span>
-      <span>{c.product.price}</span>
+      <span>{c.product?.title}</span>
+      <span>{c.product?.price}</span>
       <p>
         <button
           onClick={() => DecreaseQuantityHandler(index, c)}
