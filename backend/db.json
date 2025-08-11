@@ -14,7 +14,19 @@
       "email": "admin@mail.com",
       "password": "12",
       "isAdmin": true,
-      "cart": []
+      "cart": [
+        {
+          "product": {
+            "id": "_Gb5GZMjhaiVf8P_Q9UGF",
+            "image": "https://i.pinimg.com/originals/a2/4e/27/a24e27d9aef98312a9b95be46c05e96f.jpg",
+            "title": "bunny",
+            "price": "2455",
+            "description": "9uw jew jijjen ",
+            "category": "jwoud nid"
+          },
+          "quantity": 1
+        }
+      ]
     }
   ],
   "products": [
@@ -36,7 +48,7 @@
     },
     {
       "id": "n2pNdKlramUOjliRmFJFV",
-      "image": "https://i.pinimg.com/originals/aa/2d/81/aa2d816fb0da331cf646388c78e6149a.jpg",
+      "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
       "title": "dressroxagdyug",
       "price": "8",
       "description": "kn",
@@ -49,119 +61,8 @@
       "price": "120",
       "description": "Elegant wristwatch with premium leather strap.",
       "category": "Accessories"
-    },
-    {
-      "id": "p2HiJKlMn9876543",
-      "image": "https://i.pinimg.com/originals/8f/78/dc/8f78dc48d6c46d7e97ff9c5fcd3c7f85.jpg",
-      "title": "Stylish Handbag",
-      "price": "90",
-      "description": "Trendy handbag with spacious compartments.",
-      "category": "Bags"
-    },
-    {
-      "id": "p3OpQrStU1357924",
-      "image": "https://images.unsplash.com/photo-1585386959984-a4155224f3f6",
-      "title": "Running Sneakers",
-      "price": "75",
-      "description": "Lightweight sneakers perfect for daily runs.",
-      "category": "Shoes"
-    },
-    {
-      "id": "p4VwXyZaB2468135",
-      "image": "https://i.pinimg.com/originals/f3/36/5d/f3365d36ff8df97c6636b41b31a74e87.jpg",
-      "title": "Denim Jacket",
-      "price": "65",
-      "description": "Casual denim jacket with a modern fit.",
-      "category": "Clothing"
-    },
-    {
-      "id": "p5CdEfGhI9753186",
-      "image": "https://images.pexels.com/photos/7156882/pexels-photo-7156882.jpeg",
-      "title": "Minimalist Lamp",
-      "price": "40",
-      "description": "Sleek desk lamp for a cozy workspace.",
-      "category": "Home Decor"
-    },
-    {
-      "id": "p6JkLmNoP8642097",
-      "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
-      "title": "Wireless Headphones",
-      "price": "150",
-      "description": "Noise-cancelling over-ear headphones.",
-      "category": "Electronics"
-    },
-    {
-      "id": "p7QrStUvW7531986",
-      "image": "https://i.pinimg.com/originals/24/3a/49/243a49425776cb25e6f4d1e6dc48e446.jpg",
-      "title": "Floral Summer Dress",
-      "price": "55",
-      "description": "Lightweight dress perfect for sunny days.",
-      "category": "Clothing"
-    },
-    {
-      "id": "p8XyZaBcD6428751",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-      "title": "Gaming Mouse",
-      "price": "45",
-      "description": "Ergonomic mouse with customizable buttons.",
-      "category": "Electronics"
-    },
-    {
-      "id": "p9EfGhIjK5312864",
-      "image": "https://images.pexels.com/photos/256512/pexels-photo-256512.jpeg",
-      "title": "Scented Candle",
-      "price": "25",
-      "description": "Aromatic candle for relaxation.",
-      "category": "Home Decor"
-    },
-    {
-      "id": "p10LmNoPqR8642097",
-      "image": "https://i.pinimg.com/originals/fc/9b/06/fc9b0618c803c3e923de390c0b3f4d4c.jpg",
-      "title": "Luxury Wallet",
-      "price": "70",
-      "description": "Slim wallet made from genuine leather.",
-      "category": "Accessories"
-    },
-    {
-      "id": "p8XyZaBcD6428751",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-      "title": "Gaming Mouse",
-      "price": "45",
-      "description": "Ergonomic mouse with customizable buttons.",
-      "category": "Electronics"
-    },
-    {
-      "id": "p8XyZaBcD6428751",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-      "title": "Gaming Mouse",
-      "price": "45",
-      "description": "Ergonomic mouse with customizable buttons.",
-      "category": "Electronics"
-    },
-    {
-      "id": "p8XyZaBcD6428751",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-      "title": "Gaming Mouse",
-      "price": "45",
-      "description": "Ergonomic mouse with customizable buttons.",
-      "category": "Electronics"
-    },
-    {
-      "id": "p8XyZaBcD6428751",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-      "title": "Gaming Mouse",
-      "price": "45",
-      "description": "Ergonomic mouse with customizable buttons.",
-      "category": "Electronics"
-    },
-    {
-      "id": "p8XyZaBcD6428751",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-      "title": "Gaming Mouse",
-      "price": "45",
-      "description": "Ergonomic mouse with customizable buttons.",
-      "category": "Electronics"
     }
+
   ],
   "carts": []
 }
