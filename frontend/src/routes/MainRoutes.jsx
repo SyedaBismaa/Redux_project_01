@@ -1,7 +1,6 @@
 import { lazy } from "react"
 import { Routes, Route } from 'react-router-dom'
 import UnauthWrapper from "./UnauthWrapper";
-const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
 const Login = lazy(() => import("../pages/Login"));
 const Register = lazy(() => import("../pages/Register"));

@@ -10,11 +10,53 @@
     },
     {
       "id": "VRDyiBabjqAy9Rb_RyUDQ",
-      "username": "admin",
+      "username": "amar",
       "email": "admin@mail.com",
       "password": "12",
       "isAdmin": true,
       "cart": [
+        {
+          "product": {
+            "id": "p1AbCDeFg1234567",
+            "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+            "title": "Classic Leather Watch",
+            "price": "120",
+            "description": "Elegant wristwatch with premium leather strap.",
+            "category": "Accessories"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "n2pNdKlramUOjliRmFJFV",
+            "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
+            "title": "dressroxagdyug",
+            "price": "8",
+            "description": "kn",
+            "category": "opj"
+          },
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "tk2Yj2KQqmBN3UKzH-2Xj",
+      "username": "bismah",
+      "email": "bisma@bisma.com",
+      "password": "33",
+      "isAdmin": false,
+      "cart": [
+        {
+          "product": {
+            "id": "n2pNdKlramUOjliRmFJFV",
+            "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
+            "title": "dressroxagdyug",
+            "price": "8",
+            "description": "kn",
+            "category": "opj"
+          },
+          "quantity": 11
+        },
         {
           "product": {
             "id": "_Gb5GZMjhaiVf8P_Q9UGF",
@@ -39,12 +81,12 @@
       "category": "jwoud nid"
     },
     {
-      "id": "EKy70-At0uL-akSzsST-A",
-      "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
-      "title": "some",
-      "price": "23",
-      "description": "ttesting the cart functionality",
-      "category": "art"
+      "id": "_Gb5GZMjhaiVf8P_Q9UGF",
+      "image": "https://i.pinimg.com/originals/a2/4e/27/a24e27d9aef98312a9b95be46c05e96f.jpg",
+      "title": "bunny",
+      "price": "2455",
+      "description": "9uw jew jijjen ",
+      "category": "jwoud nid"
     },
     {
       "id": "n2pNdKlramUOjliRmFJFV",
@@ -61,8 +103,23 @@
       "price": "120",
       "description": "Elegant wristwatch with premium leather strap.",
       "category": "Accessories"
+    },
+    {
+      "id": "MZumvX84kdf1YQYoQtuRy",
+      "image": "https://i.pinimg.com/originals/aa/2d/81/aa2d816fb0da331cf646388c78e6149a.jpg",
+      "title": "bunny",
+      "price": "1.14",
+      "description": "iiohoh",
+      "category": "l"
+    },
+    {
+      "id": "LLAdnIsEgDKcx2ZhJFlK5",
+      "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
+      "title": "Biryani",
+      "price": "89",
+      "description": "pk",
+      "category": "pl[p"
     }
-
   ],
   "carts": []
 }
