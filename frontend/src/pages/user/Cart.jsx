@@ -1,10 +1,12 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { asyncupdateuser } from '../../stores/actions/userAction';
+import { useNavigate } from 'react-router-dom';
 
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const navigate=useNavigate();
   const users = useSelector((state) => state.userReducer.users);
 
   const IncreaseQuantityHandler = (index, product) => {
@@ -34,11 +36,13 @@ const Cart = () => {
     console.log(copyuser);
     dispatch(asyncupdateuser(copyuser.id, copyuser));
   }
-
+  const clickHandler = ()=>{
+     navigate("/");
+  }
   const cartItems = users.cart.map((c, index) =>
     <div 
       key={c.product?.id} 
-      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 mb-6 hover:bg-white/10 transition-all duration-200"
+      className="bg-white/5 backdrop-blur-sm border border-black/50 rounded-xl p-6 mb-6 hover:bg-white/10 transition-all duration-200"
     >
       <div className="flex flex-col md:flex-row items-center gap-6">
         {/* Product Image */}
@@ -52,8 +56,8 @@ const Cart = () => {
 
         {/* Product Details */}
         <div className="flex-1 text-center md:text-left">
-          <h3 className="text-xl font-semibold text-white mb-2">{c.product?.title}</h3>
-          <p className="text-2xl font-bold text-blue-400 mb-2">₹{c.product?.price}</p>
+          <h3 className="text-xl font-semibold  mb-2">{c.product?.title}</h3>
+          <p className="text-2xl font-bold  mb-2">₹{c.product?.price}</p>
         </div>
 
         {/* Quantity Controls */}
@@ -65,7 +69,7 @@ const Cart = () => {
             -
           </button>
           
-          <span className="px-4 py-2 bg-white/10 rounded-lg text-white font-semibold text-lg min-w-[60px] text-center">
+          <span className="px-4 py-2 bg-black/10 rounded-lg  font-semibold text-lg min-w-[60px] text-center">
             {c.quantity}
           </span>
           
@@ -79,22 +83,22 @@ const Cart = () => {
 
         {/* Total Price */}
         <div className="text-center">
-          <p className="text-sm text-gray-400 mb-1">Total</p>
-          <p className="text-xl font-bold text-green-400">₹{c.product?.price * c.quantity}</p>
+          <p className="text-sm  mb-1">Total</p>
+          <p className="text-xl font-bold ">₹{c.product?.price * c.quantity}</p>
         </div>
       </div>
     </div>
   )
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black p-6">
+    <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-5xl font-bold mb-4  ">
             Shopping Cart
           </h1>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl text-gray-900">
             {users.cart.length > 0 ? `You have ${users.cart.length} item(s) in your cart` : 'Your cart is empty'}
           </p>
         </div>
@@ -105,16 +109,16 @@ const Cart = () => {
             {cartItems}
             
             {/* Cart Summary */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 mt-8">
+            <div className="bg-white/5 backdrop-blur-sm border border-black/50 rounded-xl p-6 mt-8">
               <div className="flex justify-between items-center">
-                <span className="text-xl text-gray-300">Total Items:</span>
-                <span className="text-2xl font-bold text-white">
+                <span className="text-xl ">Total Items:</span>
+                <span className="text-2xl font-bold ">
                   {users.cart.reduce((total, item) => total + item.quantity, 0)}
                 </span>
               </div>
               <div className="flex justify-between items-center mt-4 pt-4 border-t border-white/10">
-                <span className="text-2xl text-gray-300">Total Amount:</span>
-                <span className="text-3xl font-bold text-green-400">
+                <span className="text-2xl ">Total Amount:</span>
+                <span className="text-3xl font-bold ">
                   ₹{users.cart.reduce((total, item) => total + (item.product?.price * item.quantity), 0)}
                 </span>
               </div>
@@ -126,9 +130,10 @@ const Cart = () => {
         ) : (
           <div className="text-center py-16">
             <div className="text-8xl mb-6">🛒</div>
-            <h2 className="text-3xl font-semibold text-gray-300 mb-4">Your cart is empty</h2>
-            <p className="text-gray-400 mb-8">Start shopping to add items to your cart</p>
+            <h2 className="text-3xl font-semibold  mb-4">Your cart is empty</h2>
+            <p className=" mb-8">Start shopping to add items to your cart</p>
             <button
+            onClick={clickHandler}
              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg">
               Browse Products
             </button>

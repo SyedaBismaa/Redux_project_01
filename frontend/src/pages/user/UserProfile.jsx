@@ -35,38 +35,38 @@ const UserProfile = () => {
   }
   
   return users ? (
-    <div className="min-h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black p-6">
+    <div className="min-h-screen  bg-gray-100 p-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 ">
             {users.username}
           </h1>
-          <p className="text-2xl text-gray-300">{users.email}</p>
+          <p className="text-2xl text-gray-900">{users.email}</p>
         </div>
 
         {/* Profile Stats */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+          <div className="bg-white/5 backdrop-blur-sm border border-black/40 rounded-xl p-6 text-center">
             <div className="text-4xl mb-2">👤</div>
-            <h3 className="text-xl font-semibold text-white mb-1">Profile</h3>
-            <p className="text-gray-400">User Account</p>
+            <h3 className="text-xl font-semibold mb-1">Profile</h3>
+            <p className="text-gray-800">User Account</p>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+          <div className="bg-white/5 backdrop-blur-sm border border-black/40 rounded-xl p-6 text-center">
             <div className="text-4xl mb-2">🛒</div>
-            <h3 className="text-xl font-semibold text-white mb-1">Cart Items</h3>
-            <p className="text-gray-400">{users.cart?.length || 0} items</p>
+            <h3 className="text-xl font-semibold  mb-1">Cart Items</h3>
+            <p className="text-gray-800">{users.cart?.length || 0} items</p>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+          <div className="bg-white/5 backdrop-blur-sm border border-black/40 rounded-xl p-6 text-center">
             <div className="text-4xl mb-2">⭐</div>
-            <h3 className="text-xl font-semibold text-white mb-1">Status</h3>
-            <p className="text-gray-400">{users.isAdmin ? 'Admin' : 'User'}</p>
+            <h3 className="text-xl font-semibold  mb-1">Status</h3>
+            <p className="text-gray-800">{users.isAdmin ? 'Admin' : 'User'}</p>
           </div>
         </div>
 
         {/* Update Form */}
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-8">
-          <h2 className="text-3xl font-bold text-white mb-6 text-center">Update Profile</h2>
+        <div className="bg-white/5 backdrop-blur-sm border border-black/60 rounded-2xl p-8 mb-8">
+          <h2 className="text-3xl font-bold  mb-6 text-center">Update Profile</h2>
           
           <form
             onSubmit={handleSubmit(UpdateUserHandler)}
@@ -75,12 +75,12 @@ const UserProfile = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Username Field */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium  mb-2">
                   Username
                 </label>
                 <input
                   {...register("username")}
-                  className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
+                  className='w-full px-4 py-3 bg-white/10 border border-black/50 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
                   type="text"
                   placeholder='Enter username'
                   required
@@ -89,12 +89,12 @@ const UserProfile = () => {
 
               {/* Email Field */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium  mb-2">
                   Email Address
                 </label>
                 <input
                   {...register("email")}
-                  className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
+                  className='w-full px-4 py-3 bg-white/10 border border-black/50 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
                   type="email"
                   placeholder='Enter email address'
                   required
@@ -104,12 +104,12 @@ const UserProfile = () => {
 
             {/* Password Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium  mb-2">
                 Password
               </label>
               <input
                 {...register("password")}
-                className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
+                className='w-full px-4 py-3 bg-white/10 border border-black/50 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
                 type="password"
                 placeholder='Enter new password'
                 required
