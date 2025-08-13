@@ -81,8 +81,8 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                       isActive 
-                        ? 'bg-blue-600 text-white shadow-lg' 
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                        ? 'bg-blue-600  shadow-lg' 
+                        : ' hover:bg-blue/20'
                     }`
                   }
                 >
