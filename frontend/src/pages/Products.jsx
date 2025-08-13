@@ -13,9 +13,9 @@ const Products = () => {
         {/* Header Section */}
         <div className="text-center mb-12 gap-7">
           <input
-          className='border-1 rounded-[1rem]  text-gray-800 p-3  w-[40rem]  outline-none'
+          className='border-2 rounded-[1rem]  text-gray-800 p-3  w-[40rem]  outline-none'
            type="text"placeholder='search your product' />
-          <button className='ml-3  border-1 px-6 py-2 rounded-[1rem]'>Search</button>
+          <button className='ml-3  border-2 px-6 py-2 rounded-[1rem]'>Search</button>
         </div>
 
         {/* Products Grid */}

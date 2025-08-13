@@ -25,7 +25,7 @@ const ProductTemplate = ({product}) => {
     return (
         <div className="group  rounded-2xl border-2 border-black overflow-hidden  transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
             {/* Image Container */}
-            <div className="relative overflow-hidden   p-4">
+            <div className="relative overflow-hidden   p-3">
                 <img
                     src={product.image}
                     alt={product.title}
@@ -61,7 +61,7 @@ const ProductTemplate = ({product}) => {
                     
                     <Link 
                         to={`/products/${product.id}`}
-                        className="text-center  hover:text-blue-300 font-medium text-sm py-2 px-4 rounded-lg border border-blue-400/30 hover:border-blue-400/50 hover:bg-blue-400/10 transition-all duration-200"
+                        className="text-center  hover:text-blue-600 font-medium text-sm py-2 px-4 rounded-lg border border-blue-700/30 hover:border-blue-400/50 hover:bg-blue-400/10 transition-all duration-200"
                     >
                         View Details →
                     </Link>
