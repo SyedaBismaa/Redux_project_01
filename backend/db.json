@@ -14,7 +14,41 @@
       "email": "admin@mail.com",
       "password": "12",
       "isAdmin": true,
-      "cart": []
+      "cart": [
+        {
+          "product": {
+            "id": "sh1",
+            "image": "https://i.pinimg.com/736x/00/60/cf/0060cf6e12ebbb0e0d94b897d4071d29.jpg",
+            "title": "Air Pulse",
+            "price": "119.99",
+            "description": "Breathable mesh sneakers with cushioned soles for all-day comfort. Perfect for running or casual streetwear.",
+            "category": "shoes"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "sh2",
+            "image": "https://i.pinimg.com/736x/cc/be/5d/ccbe5dad7b58097cfbebd2183f3fc663.jpg",
+            "title": "Urban Flex",
+            "price": "129.99",
+            "description": "Lightweight trainers with adaptive grip and flexible midsole. Designed for city explorers and gym lovers.",
+            "category": "shoes"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "sh3",
+            "image": "https://i.pinimg.com/736x/e2/bd/ad/e2bdad63694f6df4bc312cc3f9f290bf.jpg",
+            "title": "Street Pro",
+            "price": "139.99",
+            "description": "Chunky sole sneakers with bold detailing. A perfect blend of street style and high performance.",
+            "category": "shoes"
+          },
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "tk2Yj2KQqmBN3UKzH-2Xj",
@@ -23,17 +57,6 @@
       "password": "33",
       "isAdmin": false,
       "cart": [
-        {
-          "product": {
-            "id": "n2pNdKlramUOjliRmFJFV",
-            "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
-            "title": "dressroxagdyug",
-            "price": "8",
-            "description": "kn",
-            "category": "opj"
-          },
-          "quantity": 11
-        },
         {
           "product": {
             "id": "_Gb5GZMjhaiVf8P_Q9UGF",
@@ -50,36 +73,132 @@
   ],
   "products": [
     {
-      "id": "_Gb5GZMjhaiVf8P_Q9UGF",
-      "image": "https://i.pinimg.com/originals/a2/4e/27/a24e27d9aef98312a9b95be46c05e96f.jpg",
-      "title": "bunny",
-      "price": "2455",
-      "description": "9uw jew jijjen ",
-      "category": "jwoud nid"
+      "id": "sh1",
+      "image": "https://i.pinimg.com/736x/00/60/cf/0060cf6e12ebbb0e0d94b897d4071d29.jpg",
+      "title": "Air Pulse",
+      "price": "119.99",
+      "description": "Breathable mesh sneakers with cushioned soles for all-day comfort. Perfect for running or casual streetwear.",
+      "category": "shoes"
     },
     {
-      "id": "n2pNdKlramUOjliRmFJFV",
-      "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
-      "title": "dressroxagdyug",
-      "price": "8",
-      "description": "kn",
-      "category": "opj"
+      "id": "sh2",
+      "image": "https://i.pinimg.com/736x/cc/be/5d/ccbe5dad7b58097cfbebd2183f3fc663.jpg",
+      "title": "Urban Flex",
+      "price": "129.99",
+      "description": "Lightweight trainers with adaptive grip and flexible midsole. Designed for city explorers and gym lovers.",
+      "category": "shoes"
     },
     {
-      "id": "p1AbCDeFg1234567",
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
-      "title": "Classic Leather Watch",
-      "price": "120",
-      "description": "Elegant wristwatch with premium leather strap.",
-      "category": "Accessories"
+      "id": "sh3",
+      "image": "https://i.pinimg.com/736x/e2/bd/ad/e2bdad63694f6df4bc312cc3f9f290bf.jpg",
+      "title": "Street Pro",
+      "price": "139.99",
+      "description": "Chunky sole sneakers with bold detailing. A perfect blend of street style and high performance.",
+      "category": "shoes"
     },
     {
-      "id": "LLAdnIsEgDKcx2ZhJFlK5",
-      "image": "https://images.unsplash.com/photo-1753735880239-d2213c79d1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
-      "title": "Biryani",
-      "price": "89",
-      "description": "pk",
-      "category": "pl[p"
+      "id": "sh4",
+      "image": "https://i.pinimg.com/1200x/bb/90/df/bb90dfe1ec462caa3559729ab02fde25.jpg",
+      "title": "Zen Walk",
+      "price": "99.99",
+      "description": "Minimalist sneakers with ultra-soft insoles for a relaxed walking experience. Ideal for daily wear.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh5",
+      "image": "https://i.pinimg.com/736x/e8/44/c3/e844c3434dd35899ca18a5e6170771d1.jpg",
+      "title": "Volt Rush",
+      "price": "149.99",
+      "description": "Performance sneakers with shock-absorption technology. Perfect for high-intensity workouts and running.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh6",
+      "image": "https://i.pinimg.com/736x/88/0a/38/880a38645d37e2e0602ec8ad5d263a5a.jpg",
+      "title": "Cloud Step",
+      "price": "109.99",
+      "description": "Ultra-light sneakers with cloud foam cushioning. Gives the sensation of walking on air.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh7",
+      "image": "https://i.pinimg.com/1200x/67/05/60/6705605da45b4e4679be5bd5886215f3.jpg",
+      "title": "Neo Grip",
+      "price": "119.99",
+      "description": "High-traction sole for superior grip on any surface. Sleek design meets rugged performance.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh8",
+      "image": "https://i.pinimg.com/1200x/c0/59/9a/c0599a5e865e574cabfc047b6f5e4839.jpg",
+      "title": "Pulse Max",
+      "price": "139.99",
+      "description": "Modern high-top sneakers with premium knit fabric. Combines fashion and sport effortlessly.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh9",
+      "image": "https://i.pinimg.com/1200x/53/9b/49/539b493e7ed2793ef4418ddbf9a16b7d.jpg",
+      "title": "Speed Core",
+      "price": "129.99",
+      "description": "Streamlined running shoes built for speed and agility. Breathable and responsive.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh10",
+      "image": "https://i.pinimg.com/736x/1a/72/0a/1a720a0e4134c0f0d4647b0b91458dfb.jpg",
+      "title": "Aero Dash",
+      "price": "119.99",
+      "description": "Sporty sneakers with aerodynamic design and cushioned fit. Ideal for both workouts and casual outings.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh11",
+      "image": "https://i.pinimg.com/736x/ba/7f/76/ba7f76447ee6237d1f4141651313b4ca.jpg",
+      "title": "Vibe Run",
+      "price": "99.99",
+      "description": "Everyday trainers with a trendy look and soft inner lining. Designed for comfort and style.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh12",
+      "image": "https://i.pinimg.com/736x/00/ca/1d/00ca1dff0ec572d5400033a6d8e9a597.jpg",
+      "title": "Core Fit",
+      "price": "89.99",
+      "description": "Simple yet stylish sneakers for versatile wear. Pairs well with any outfit.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh13",
+      "image": "https://i.pinimg.com/1200x/69/64/90/6964905b09a73d91ae8e4e1ac61380cb.jpg",
+      "title": "Track Edge",
+      "price": "149.99",
+      "description": "Durable sneakers with multi-surface traction. Perfect for sports and outdoor activities.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh14",
+      "image": "https://i.pinimg.com/736x/d7/7b/f6/d77bf66ea327768f4477f2e19eb797c5.jpg",
+      "title": "Hyper Glide",
+      "price": "139.99",
+      "description": "Sleek performance shoes with energy-return cushioning. Built for runners who seek speed.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh15",
+      "image": "https://i.pinimg.com/736x/63/3a/4f/633a4f2cb06623851a460031f71f4f6f.jpg",
+      "title": "Wave Ride",
+      "price": "109.99",
+      "description": "Modern sneakers with wave-pattern soles for better bounce and style. Ideal for urban life.",
+      "category": "shoes"
+    },
+    {
+      "id": "sh1",
+      "image": "https://i.pinimg.com/736x/5e/9f/a7/5e9fa738364e341b91f587075cabfa29.jpg",
+      "title": "Air Pulse",
+      "price": "119.99",
+      "description": "Breathable mesh sneakers with cushioned soles for all-day comfort. Perfect for running or casual streetwear.",
+      "category": "shoes"
     }
   ],
   "carts": []

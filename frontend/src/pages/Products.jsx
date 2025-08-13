@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 import InfiniteScroll from "react-infinite-scroll-component"
 const ProductTemplate = lazy(() => import("../components/ProductTemplate"));
 import useInfiniteProducts from '../utils/InfiniteProducts';
@@ -6,23 +6,65 @@ import useInfiniteProducts from '../utils/InfiniteProducts';
 const Products = () => {
 
   const {products , fetchproducts, hasMore} =  useInfiniteProducts();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  // Filter products based on search term
+  useEffect(() => {
+    if (searchTerm.trim() === '') {
+      setFilteredProducts(products);
+    } else {
+      const filtered = products.filter(product =>
+        product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.category.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+    }
+  }, [searchTerm, products]);
+
+  // Search handler function
+  const searchHandler = () => {
+    // The search is already handled by the useEffect above
+    // This function can be used for additional search logic if needed
+    console.log('Searching for:', searchTerm);
+  };
+
+  // Handle Enter key press in search input
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      searchHandler();
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-100  p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-12 gap-7">
-          <input
-          className='border-2 rounded-[1rem]  text-gray-800 p-3  w-[40rem]  outline-none'
-           type="text"placeholder='search your product' />
-          <button className='ml-3  border-2 px-6 py-2 rounded-[1rem]'>Search</button>
+        <div className="text-center mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+            <input
+              className='border-2 rounded-[1rem]  p-3 w-full sm:w-80 md:w-96 lg:w-[40rem] outline-none '
+              type="text"
+              placeholder='search your product'
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyPress={handleKeyPress}
+            />
+            <button 
+              className='border-2 px-6 py-3 rounded-[1rem]   whitespace-nowrap'
+              onClick={searchHandler}
+            >
+              Search
+            </button>
+          </div>
         </div>
 
         {/* Products Grid */}
         <div className="mb-8">
           <InfiniteScroll
             className='overflow-auto'
-            dataLength={products.length}
+            dataLength={filteredProducts.length}
             next={fetchproducts}
             hasMore={hasMore}
             loader={
@@ -40,7 +82,7 @@ const Products = () => {
             }
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {products.map((product) => (
+              {filteredProducts.map((product) => (
                 <Suspense
                   key={product.id}
                   fallback={

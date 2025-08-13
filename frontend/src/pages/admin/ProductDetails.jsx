@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom'
 import { useForm } from "react-hook-form"
 import { asyncdeleteproduct, asyncupdateproduct } from '../../stores/actions/productAction';
+import { asyncupdateuser } from '../../stores/actions/userAction';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -34,6 +35,32 @@ const ProductDetails = () => {
     navigate("/")
   }
 
+
+  const addToCartHandler = (product) => {
+    if (!users) {
+      
+      console.log("User not logged in");
+      return;
+    }
+
+    const copyuser = { ...users, cart: [...users.cart] };
+    const existingItemIndex = copyuser.cart.findIndex((c) => c?.product?.id == product.id);
+    
+    if (existingItemIndex === -1) {
+      // Add new item to cart
+      copyuser.cart.push({ product, quantity: 1 });
+    } else {
+      
+      copyuser.cart[existingItemIndex] = {
+        product,
+        quantity: copyuser.cart[existingItemIndex].quantity + 1,
+      };
+    }
+    
+    dispatch(asyncupdateuser(copyuser.id, copyuser));
+    navigate("/cart")
+  };
+
   return product ? (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-6xl mx-auto">
@@ -65,7 +92,10 @@ const ProductDetails = () => {
             </div>
             
             {/* Add to Cart Button */}
-            <button className="w-full mt-6 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-green-500/65">
+            <button 
+              className="w-full mt-6 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-green-500/65"
+              onClick={() => addToCartHandler(product)}
+            >
               🛒 Add To Cart
             </button>
           </div>
