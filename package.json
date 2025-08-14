@@ -4,7 +4,7 @@
   "description": "JSON Server API for ShoeTopia",
   "main": "server.js",
   "scripts": {
-    "start": "json-server --watch backend/db.json --port $PORT --host 0.0.0.0"
+    "start": "json-server --watch db.json --port $PORT --host 0.0.0.0"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.3"
